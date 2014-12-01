@@ -23,6 +23,7 @@ libraryDependencies ++= Seq(
   "mysql" % "mysql-connector-java" % "5.1.26",
   "org.jsoup" % "jsoup" % "1.7.2",
   "org.apache.poi" % "poi" % "3.10-FINAL",
+  "com.google.inject" % "guice" % "3.0",
   "org.eclipse.jgit" % "org.eclipse.jgit" % "3.4.1.201406201815-r",
   "org.webjars" % "angularjs" % "1.3.1",
   "org.webjars" % "angular-loading-bar" % "0.6.0",
