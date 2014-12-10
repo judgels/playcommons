@@ -27,7 +27,6 @@ libraryDependencies ++= Seq(
   "org.eclipse.jgit" % "org.eclipse.jgit" % "3.4.1.201406201815-r",
   "org.webjars" % "angularjs" % "1.3.1",
   "org.webjars" % "angular-loading-bar" % "0.6.0",
-  "org.webjars" % "bootstrap" % "3.0.2",
   "org.webjars" % "ckeditor" % "4.4.1",
   "org.webjars" % "coffee-script" % "1.8.0",
   "org.webjars" % "highcharts" % "4.0.4",
@@ -40,7 +39,8 @@ libraryDependencies ++= Seq(
   "org.webjars" % "less" % "1.7.5",
   "org.webjars" % "prettify" % "4-Mar-2013",
   "org.webjars" % "requirejs" % "2.1.15",
-  "com.puppycrawl.tools" % "checkstyle" % "6.1"
+  "com.puppycrawl.tools" % "checkstyle" % "6.1",
+  "com.adrianhurt" %% "play-bootstrap3" % "0.2"
 )
 
 TestNGPlugin.testNGSettings
