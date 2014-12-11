@@ -53,6 +53,10 @@ jacoco.settings
 
 parallelExecution in jacoco.Config := false
 
+includeFilter in (Assets, LessKeys.less) := "*.less"
+
+excludeFilter in (Assets, LessKeys.less) := "_*.less"
+
 javaOptions in Test ++= Seq(
   "-Dconfig.resource=test.conf"
 )
