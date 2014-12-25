@@ -40,7 +40,8 @@ libraryDependencies ++= Seq(
   "org.webjars" % "prettify" % "4-Mar-2013",
   "org.webjars" % "requirejs" % "2.1.15",
   "com.puppycrawl.tools" % "checkstyle" % "6.1",
-  "com.adrianhurt" %% "play-bootstrap3" % "0.3"
+  "com.adrianhurt" %% "play-bootstrap3" % "0.3",
+  "com.nimbusds" % "c2id-server-sdk" % "2.0"
 )
 
 TestNGPlugin.testNGSettings
