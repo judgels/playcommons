@@ -17,6 +17,7 @@ libraryDependencies ++= Seq(
   filters,
   cache,
   "org.hibernate" % "hibernate-entitymanager" % "4.3.7.Final",
+//  "org.hibernate" % "hibernate-jpamodelgen" % "4.3.7.Final",
   "commons-io" % "commons-io" % "2.4",
   "com.fasterxml.jackson.module" % "jackson-module-scala" % "2.0.2",
   "com.google.guava" % "guava" % "r05",
