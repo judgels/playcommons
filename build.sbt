@@ -5,7 +5,7 @@ name := """judgels-play-commons"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayJava).disablePlugins(plugins.JUnitXmlReportPlugin)
+lazy val commons = (project in file(".")).enablePlugins(PlayJava).disablePlugins(plugins.JUnitXmlReportPlugin)
 
 scalaVersion := "2.11.1"
 
@@ -40,6 +40,7 @@ libraryDependencies ++= Seq(
   "org.webjars" % "less" % "1.7.5",
   "org.webjars" % "prettify" % "4-Mar-2013",
   "org.webjars" % "requirejs" % "2.1.15",
+  "org.webjars" % "bootstrap-datetimepicker" % "2.3.1",
   "com.puppycrawl.tools" % "checkstyle" % "6.1",
   "com.adrianhurt" %% "play-bootstrap3" % "0.3",
   "com.nimbusds" % "c2id-server-sdk" % "2.0"
