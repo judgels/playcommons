@@ -5,7 +5,9 @@ name := """judgels-play-commons"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val commons = (project in file(".")).enablePlugins(PlayJava).disablePlugins(plugins.JUnitXmlReportPlugin)
+lazy val commons = (project in file("."))
+                    .enablePlugins(PlayJava)
+                    .disablePlugins(plugins.JUnitXmlReportPlugin)
 
 scalaVersion := "2.11.1"
 
@@ -65,5 +67,3 @@ javaOptions in Test ++= Seq(
 )
 
 javacOptions ++= Seq("-s", "app")
-
-javacOptions ++= Seq("-Xlint:unchecked")
