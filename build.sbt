@@ -1,11 +1,11 @@
 import de.johoop.testngplugin.TestNGPlugin
 import de.johoop.jacoco4sbt.JacocoPlugin.jacoco
 
-name := """judgels-play-commons"""
+name := """playcommons"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val commons = (project in file("."))
+lazy val playcommons = (project in file("."))
                     .enablePlugins(PlayJava)
                     .disablePlugins(plugins.JUnitXmlReportPlugin)
 
