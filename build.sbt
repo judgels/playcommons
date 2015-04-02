@@ -24,6 +24,7 @@ libraryDependencies ++= Seq(
   "com.fasterxml.jackson.module" % "jackson-module-scala" % "2.0.2",
   "com.google.guava" % "guava" % "r05",
   "mysql" % "mysql-connector-java" % "5.1.26",
+  "org.webjars" % "bootstrap" % "3.3.4",
   "org.webjars" % "coffee-script" % "1.8.0",
   "org.webjars" % "jquery" % "2.1.1",
   "org.webjars" % "jquery-ui" % "1.11.1",
@@ -32,7 +33,7 @@ libraryDependencies ++= Seq(
   "org.webjars" % "requirejs" % "2.1.15",
   "org.webjars" % "bootstrap-select" % "1.6.3",
   "com.puppycrawl.tools" % "checkstyle" % "6.1",
-  "com.adrianhurt" %% "play-bootstrap3" % "0.3",
+  "com.adrianhurt" %% "play-bootstrap3" % "0.4",
   "com.nimbusds" % "c2id-server-sdk" % "2.0"
 )
 
