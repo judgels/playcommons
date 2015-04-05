@@ -22,6 +22,7 @@ libraryDependencies ++= Seq(
 //  "org.hibernate" % "hibernate-jpamodelgen" % "4.3.7.Final",
   "commons-io" % "commons-io" % "2.4",
   "com.fasterxml.jackson.module" % "jackson-module-scala" % "2.0.2",
+  "org.eclipse.jgit" % "org.eclipse.jgit" % "3.7.0.201502260915-r",
   "com.google.guava" % "guava" % "r05",
   "mysql" % "mysql-connector-java" % "5.1.26",
   "org.webjars" % "bootstrap" % "3.3.4",
