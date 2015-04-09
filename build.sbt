@@ -35,7 +35,8 @@ libraryDependencies ++= Seq(
   "org.webjars" % "bootstrap-select" % "1.6.3",
   "com.puppycrawl.tools" % "checkstyle" % "6.1",
   "com.adrianhurt" %% "play-bootstrap3" % "0.4",
-  "com.nimbusds" % "c2id-server-sdk" % "2.0"
+  "com.nimbusds" % "c2id-server-sdk" % "2.0",
+  "com.amazonaws" % "aws-java-sdk" % "1.9.28.1"
 )
 
 TestNGPlugin.testNGSettings
