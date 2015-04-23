@@ -6,7 +6,7 @@ lazy val playcommons = (project in file("."))
     .disablePlugins(plugins.JUnitXmlReportPlugin)
     .settings(
         name := "playcommons",
-        version := IO.read(file("version.properties")),
+        version := IO.read(file("version.properties")).trim,
         scalaVersion := "2.11.1",
         libraryDependencies ++= Seq(
             javaJdbc,
