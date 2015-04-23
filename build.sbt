@@ -43,3 +43,8 @@ lazy val playcommons = (project in file("."))
     .settings(
         excludeFilter in (Assets, LessKeys.less) := "_*.less"
     )
+    .settings(
+        publishArtifact in (Compile, packageDoc) := false,
+        publishArtifact in packageDoc := false,
+        sources in (Compile,doc) := Seq.empty
+    )
