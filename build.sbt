@@ -22,7 +22,7 @@ lazy val playcommons = (project in file("."))
             "com.google.guava" % "guava" % "r05",
             "mysql" % "mysql-connector-java" % "5.1.26",
             "org.webjars" % "jquery" % "2.1.1",
-            "org.webjars" % "jquery-ui" % "1.11.1",
+            "org.webjars" % "jquery-ui" % "1.11.4",
             "org.webjars" % "less" % "1.7.5",
             "org.webjars" % "requirejs" % "2.1.15",
             "org.webjars" % "bootstrap-select" % "1.6.3",
