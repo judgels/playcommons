@@ -27,6 +27,7 @@ lazy val playcommons = (project in file("."))
             "org.webjars" % "requirejs" % "2.1.15",
             "org.webjars" % "bootstrap-select" % "1.6.3",
             "org.webjars" % "momentjs" % "2.10.2",
+            "org.webjars" % "Eonasdan-bootstrap-datetimepicker" % "4.7.14",
             "com.puppycrawl.tools" % "checkstyle" % "6.1",
             "org.eclipse.jgit" % "org.eclipse.jgit" % "3.7.0.201502260915-r",
             "com.nimbusds" % "c2id-server-sdk" % "2.0",
