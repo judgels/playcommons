@@ -31,7 +31,8 @@ lazy val playcommons = (project in file("."))
             "com.puppycrawl.tools" % "checkstyle" % "6.1",
             "org.eclipse.jgit" % "org.eclipse.jgit" % "3.7.0.201502260915-r",
             "com.nimbusds" % "c2id-server-sdk" % "2.0",
-            "com.amazonaws" % "aws-java-sdk" % "1.9.28.1"
+            "com.amazonaws" % "aws-java-sdk" % "1.9.28.1" exclude("joda-time", "joda-time"),
+            "joda-time" % "joda-time" % "2.3"
         )
     )
     .settings(TestNGPlugin.testNGSettings: _*)
