@@ -32,7 +32,9 @@ lazy val playcommons = (project in file("."))
             "org.eclipse.jgit" % "org.eclipse.jgit" % "3.7.0.201502260915-r",
             "com.nimbusds" % "c2id-server-sdk" % "2.0",
             "com.amazonaws" % "aws-java-sdk" % "1.9.28.1" exclude("joda-time", "joda-time"),
-            "joda-time" % "joda-time" % "2.3"
+            "joda-time" % "joda-time" % "2.3",
+            "org.powermock" % "powermock-api-mockito" % "1.6.2",
+            "org.powermock" % "powermock-module-testng" % "1.6.2"
         )
     )
     .settings(TestNGPlugin.testNGSettings: _*)
