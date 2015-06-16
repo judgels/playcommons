@@ -19,11 +19,7 @@ lazy val playcommons = (project in file("."))
             "org.hibernate" % "hibernate-entitymanager" % "4.3.7.Final",
             "org.webjars" % "bootstrap" % "3.3.4",
             "com.adrianhurt" %% "play-bootstrap3" % "0.4",
-            "com.google.code.gson" % "gson" % "2.3.1",
-            "commons-io" % "commons-io" % "2.4",
-            "com.google.guava" % "guava" % "r05",
             "mysql" % "mysql-connector-java" % "5.1.26",
-            "org.apache.httpcomponents" % "httpclient" % "4.5",
             "org.webjars" % "jquery" % "2.1.1",
             "org.webjars" % "jquery-ui" % "1.11.4",
             "org.webjars" % "less" % "1.7.5",
@@ -31,13 +27,10 @@ lazy val playcommons = (project in file("."))
             "org.webjars" % "bootstrap-select" % "1.6.3",
             "org.webjars" % "momentjs" % "2.10.2",
             "org.webjars" % "Eonasdan-bootstrap-datetimepicker" % "4.7.14",
-            "com.puppycrawl.tools" % "checkstyle" % "6.1",
             "org.eclipse.jgit" % "org.eclipse.jgit" % "3.7.0.201502260915-r",
             "com.nimbusds" % "c2id-server-sdk" % "2.0",
             "com.amazonaws" % "aws-java-sdk" % "1.9.28.1" exclude("joda-time", "joda-time"),
-            "joda-time" % "joda-time" % "2.3",
-            "org.powermock" % "powermock-api-mockito" % "1.6.2",
-            "org.powermock" % "powermock-module-testng" % "1.6.2"
+            "joda-time" % "joda-time" % "2.3"
         )
     )
     .settings(TestNGPlugin.testNGSettings: _*)
