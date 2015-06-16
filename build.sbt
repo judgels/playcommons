@@ -4,6 +4,8 @@ import de.johoop.jacoco4sbt.JacocoPlugin.jacoco
 lazy val playcommons = (project in file("."))
     .enablePlugins(PlayJava, SbtWeb)
     .disablePlugins(plugins.JUnitXmlReportPlugin)
+    .dependsOn(judgelscommons)
+    .aggregate(judgelscommons)
     .settings(
         name := "playcommons",
         version := IO.read(file("version.properties")).trim,
@@ -21,6 +23,7 @@ lazy val playcommons = (project in file("."))
             "commons-io" % "commons-io" % "2.4",
             "com.google.guava" % "guava" % "r05",
             "mysql" % "mysql-connector-java" % "5.1.26",
+            "org.apache.httpcomponents" % "httpclient" % "4.5",
             "org.webjars" % "jquery" % "2.1.1",
             "org.webjars" % "jquery-ui" % "1.11.4",
             "org.webjars" % "less" % "1.7.5",
@@ -53,3 +56,5 @@ lazy val playcommons = (project in file("."))
         publishArtifact in packageDoc := false,
         sources in (Compile,doc) := Seq.empty
     )
+
+lazy val judgelscommons = RootProject(file("../judgels-commons"))
