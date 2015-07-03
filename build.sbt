@@ -9,30 +9,32 @@ lazy val playcommons = (project in file("."))
     .settings(
         name := "playcommons",
         version := IO.read(file("version.properties")).trim,
-        scalaVersion := "2.11.1",
+        scalaVersion := "2.11.7",
         libraryDependencies ++= Seq(
             javaJdbc,
             javaWs,
             javaJpa.exclude("org.hibernate.javax.persistence", "hibernate-jpa-2.0-api"),
             filters,
             cache,
+            evolutions,
             "javax.inject" % "javax.inject" % "1",
             "org.hibernate" % "hibernate-entitymanager" % "4.3.7.Final",
             "org.springframework" % "spring-context" % "4.1.6.RELEASE",
-            "org.webjars" % "bootstrap" % "3.3.4",
-            "com.adrianhurt" %% "play-bootstrap3" % "0.4",
             "mysql" % "mysql-connector-java" % "5.1.26",
-            "org.webjars" % "jquery" % "2.1.3",
-            "org.webjars" % "jquery-ui" % "1.11.4",
-            "org.webjars" % "less" % "1.7.5",
-            "org.webjars" % "requirejs" % "2.1.15",
-            "org.webjars" % "bootstrap-select" % "1.6.3",
-            "org.webjars" % "momentjs" % "2.10.2",
-            "org.webjars" % "Eonasdan-bootstrap-datetimepicker" % "4.7.14",
+            "com.adrianhurt" %% "play-bootstrap3" % "0.4.4-P24" exclude("org.webjars", "jquery"),
+            "org.webjars" % "bootstrap" % "3.3.4" exclude("org.webjars", "jquery"),
+            "org.webjars" % "jquery" % "2.1.4",
+            "org.webjars" % "jquery-ui" % "1.11.4" exclude("org.webjars", "jquery"),
+            "org.webjars" % "less" % "2.5.0",
+            "org.webjars" % "requirejs" % "2.1.18",
+            "org.webjars" % "momentjs" % "2.10.3",
+            "org.webjars" % "bootstrap-select" % "1.6.3" exclude("org.webjars", "bootstrap"),
+            "org.webjars" % "Eonasdan-bootstrap-datetimepicker" % "4.7.14" exclude("org.webjars", "bootstrap"),
             "org.eclipse.jgit" % "org.eclipse.jgit" % "3.7.0.201502260915-r",
             "com.nimbusds" % "c2id-server-sdk" % "2.0",
             "com.amazonaws" % "aws-java-sdk" % "1.9.28.1" exclude("joda-time", "joda-time"),
-            "joda-time" % "joda-time" % "2.3"
+            "joda-time" % "joda-time" % "2.3",
+            "org.seleniumhq.selenium" % "selenium-java" % "2.46.0"
         )
     )
     .settings(TestNGPlugin.testNGSettings: _*)
