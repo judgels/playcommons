@@ -30,9 +30,7 @@ lazy val playcommons = (project in file("."))
             "org.webjars" % "momentjs" % "2.10.3",
             "org.webjars" % "bootstrap-select" % "1.6.3" exclude("org.webjars", "bootstrap"),
             "org.webjars" % "Eonasdan-bootstrap-datetimepicker" % "4.7.14" exclude("org.webjars", "bootstrap"),
-            "org.eclipse.jgit" % "org.eclipse.jgit" % "3.7.0.201502260915-r",
             "com.nimbusds" % "c2id-server-sdk" % "2.0",
-            "com.amazonaws" % "aws-java-sdk" % "1.9.28.1" exclude("joda-time", "joda-time"),
             "joda-time" % "joda-time" % "2.3",
             "org.seleniumhq.selenium" % "selenium-java" % "2.46.0"
         )
