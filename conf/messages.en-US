@@ -1,0 +1,61 @@
+commons.header.serverTime=Server Time
+
+commons.footer.aboutUs=About Us
+commons.footer.news=News
+commons.footer.contact=Contact
+
+commons.profile.edit=Edit
+commons.profile.logout=Log out
+
+commons.id=ID
+commons.jid=JID
+
+commons.create=Create New
+commons.view=View
+commons.update=Update
+commons.search=Search
+commons.upload=Upload
+
+commons.info=Info
+commons.value=Value
+
+commons.showing=Showing
+commons.outOf=out of
+
+commons.auth.login=Log In
+commons.auth.hello=Hello, guest. You are not logged in.
+commons.auth.loginWithTokiId=Log in with TOKI ID
+
+commons.more=More
+commons.filter=Filter
+commons.add=Add
+commons.next=Next
+commons.enter=Enter
+commons.enable=Enable
+commons.disable=Disable
+commons.makeDefault=Make Default
+
+commons.poweredBy=Powered by
+commons.judgels=Judgels
+
+commons.pageNotFound=Page Not Found
+commons.pageNotFound.message=Sorry, the page you are looking for doesn''t exist in the system.
+commons.entityNotFound=Entity Not Found
+commons.entityNotFound.message=that you are looking for doesn''t exist in the system.
+commons.unsupportedOperation=Unsupported Operation
+commons.unsupportedOperation.message=Your action is not yet supported.
+
+commons.actions=Actions
+commons.menu=Menu
+
+commons.sidebar.show=Show Sidebar
+commons.sidebar.hide=Hide Sidebar
+commons.fullscreen.enter=Enter Fullscreen
+commons.fullscreen.exit=Exit Fullscreen
+commons.viewMenu=Views Menu
+
+commons.noViewpoint=No Viewpoint
+commons.viewAs=View As
+commons.resetViewAs=Reset View
+
+commons.moment.locale=en
