@@ -4,8 +4,8 @@ import de.johoop.jacoco4sbt.JacocoPlugin.jacoco
 lazy val playcommons = (project in file("."))
     .enablePlugins(PlayJava, SbtWeb)
     .disablePlugins(plugins.JUnitXmlReportPlugin)
-    .dependsOn(judgelscommons)
-    .aggregate(judgelscommons)
+    .dependsOn(commons)
+    .aggregate(commons)
     .settings(
         name := "playcommons",
         version := IO.read(file("version.properties")).trim,
@@ -51,4 +51,4 @@ lazy val playcommons = (project in file("."))
         sources in (Compile,doc) := Seq.empty
     )
 
-lazy val judgelscommons = RootProject(file("../judgels-commons"))
+lazy val commons = RootProject(file("../commons"))
