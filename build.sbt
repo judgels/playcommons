@@ -28,10 +28,12 @@ lazy val playcommons = (project in file("."))
             "org.webjars" % "less" % "2.5.0",
             "org.webjars" % "requirejs" % "2.1.18",
             "org.webjars" % "momentjs" % "2.10.3",
+            "org.webjars" % "ckeditor" % "4.5.3",
             "org.webjars" % "bootstrap-select" % "1.6.3" exclude("org.webjars", "bootstrap"),
             "org.webjars" % "Eonasdan-bootstrap-datetimepicker" % "4.7.14" exclude("org.webjars", "bootstrap"),
             "joda-time" % "joda-time" % "2.3",
-            "org.seleniumhq.selenium" % "selenium-java" % "2.46.0"
+            "org.seleniumhq.selenium" % "selenium-java" % "2.46.0",
+            "com.googlecode.htmlcompressor" % "htmlcompressor" % "1.4"
         )
     )
     .settings(TestNGPlugin.testNGSettings: _*)
