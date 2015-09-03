@@ -33,6 +33,7 @@ lazy val playcommons = (project in file("."))
             "org.webjars" % "Eonasdan-bootstrap-datetimepicker" % "4.7.14" exclude("org.webjars", "bootstrap"),
             "joda-time" % "joda-time" % "2.3",
             "org.seleniumhq.selenium" % "selenium-java" % "2.46.0",
+            "org.jsoup" % "jsoup" % "1.8.3",
             "com.googlecode.htmlcompressor" % "htmlcompressor" % "1.4"
         )
     )
