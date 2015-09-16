@@ -21,6 +21,7 @@ lazy val playcommons = (project in file("."))
             "org.hibernate" % "hibernate-entitymanager" % "4.3.7.Final",
             "org.springframework" % "spring-context" % "4.1.6.RELEASE",
             "mysql" % "mysql-connector-java" % "5.1.26",
+            "com.typesafe.play.modules" %% "play-modules-redis" % "2.4.1",
             "com.adrianhurt" %% "play-bootstrap3" % "0.4.4-P24" exclude("org.webjars", "jquery"),
             "org.webjars" % "bootstrap" % "3.3.4" exclude("org.webjars", "jquery"),
             "org.webjars" % "jquery" % "2.1.4",
@@ -55,5 +56,7 @@ lazy val playcommons = (project in file("."))
         publishArtifact in packageDoc := false,
         sources in (Compile,doc) := Seq.empty
     )
+
+resolvers += "google-sedis-fix" at "http://pk11-scratch.googlecode.com/svn/trunk"
 
 lazy val commons = RootProject(file("../commons"))
