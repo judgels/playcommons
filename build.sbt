@@ -35,7 +35,8 @@ lazy val playcommons = (project in file("."))
             "joda-time" % "joda-time" % "2.3",
             "org.seleniumhq.selenium" % "selenium-java" % "2.46.0",
             "org.jsoup" % "jsoup" % "1.8.3",
-            "com.googlecode.htmlcompressor" % "htmlcompressor" % "1.4"
+            "com.googlecode.htmlcompressor" % "htmlcompressor" % "1.4",
+            "com.google.apis" % "google-api-services-analytics" % "v3-rev118-1.20.0"
         )
     )
     .settings(TestNGPlugin.testNGSettings: _*)
