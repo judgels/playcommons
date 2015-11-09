@@ -36,7 +36,8 @@ lazy val playcommons = (project in file("."))
             "org.seleniumhq.selenium" % "selenium-java" % "2.46.0",
             "org.jsoup" % "jsoup" % "1.8.3",
             "com.googlecode.htmlcompressor" % "htmlcompressor" % "1.4",
-            "com.google.apis" % "google-api-services-analytics" % "v3-rev118-1.20.0"
+            "com.google.apis" % "google-api-services-analytics" % "v3-rev118-1.20.0",
+            "org.apache.poi" % "poi" % "3.10-FINAL"
         )
     )
     .settings(TestNGPlugin.testNGSettings: _*)
