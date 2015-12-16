@@ -1,8 +1,8 @@
 package org.iatoki.judgels.play.controllers;
 
 import com.googlecode.htmlcompressor.compressor.HtmlCompressor;
-import org.iatoki.judgels.play.LazyHtml;
 import org.iatoki.judgels.play.HtmlTemplate;
+import org.iatoki.judgels.play.LazyHtml;
 import org.iatoki.judgels.play.views.html.base.baseLayout;
 import org.iatoki.judgels.play.views.html.base.breadcrumbsLayout;
 import org.iatoki.judgels.play.views.html.base.headerFooterLayout;
@@ -10,8 +10,10 @@ import org.iatoki.judgels.play.views.html.base.singleColumnLayout;
 import org.iatoki.judgels.play.views.html.base.twoColumnLayout;
 import org.iatoki.judgels.play.views.html.content.categoryTabsLayout;
 import org.iatoki.judgels.play.views.html.content.contentLayout;
+import org.iatoki.judgels.play.views.html.content.descriptionLayout;
 import org.iatoki.judgels.play.views.html.content.mainTabsLayout;
 import org.iatoki.judgels.play.views.html.content.mainTitleLayout;
+import org.iatoki.judgels.play.views.html.content.scriptsLayout;
 import org.iatoki.judgels.play.views.html.content.secondaryTabsLayout;
 import play.api.mvc.Call;
 import play.data.Form;
@@ -67,6 +69,10 @@ public abstract class AbstractJudgelsController extends Controller {
         return call.absoluteURL(request(), request().secure());
     }
 
+    protected HtmlTemplate getBaseHtmlTemplate() {
+        return new HtmlTemplate();
+    }
+
     protected Result renderTemplate(HtmlTemplate template) {
         LazyHtml content = template.getContent();
 
@@ -76,6 +82,10 @@ public abstract class AbstractJudgelsController extends Controller {
 
         if (template.hasMainTabs()) {
             content.appendLayout(c -> mainTabsLayout.render(template.getMainTabs(), c));
+        }
+
+        if (template.hasDescription()) {
+            content.appendLayout(c -> descriptionLayout.render(template.getDescription(), c));
         }
 
         if (template.hasMainTitle()) {
@@ -97,6 +107,7 @@ public abstract class AbstractJudgelsController extends Controller {
         content.appendLayout(c -> breadcrumbsLayout.render(template.getBreadcrumbLinks(), c));
         content.appendLayout(c -> headerFooterLayout.render(c));
         content.appendLayout(c -> baseLayout.render(template.getPageTitle(), c));
+        content.appendLayout(c -> scriptsLayout.render(template.getAdditionalScripts(), c));
 
         return lazyOk(content);
     }
