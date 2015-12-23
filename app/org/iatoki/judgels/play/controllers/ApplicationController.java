@@ -5,6 +5,10 @@ import play.mvc.Result;
 
 import java.io.File;
 
+/**
+ * @deprecated Has been renamed to JudgelsPlayCommonsController
+ */
+@Deprecated
 public final class ApplicationController extends AbstractJudgelsController {
 
     public static Result favicon() {

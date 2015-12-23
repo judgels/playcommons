@@ -18,6 +18,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 public abstract class AbstractHibernateDao<K, M extends AbstractModel> extends AbstractDao<K, M> {
 
     protected AbstractHibernateDao(Class<M> modelClass) {

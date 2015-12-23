@@ -2,8 +2,8 @@ package org.iatoki.judgels.play.services.impls;
 
 import org.hibernate.Session;
 import org.hibernate.internal.SessionImpl;
-import org.iatoki.judgels.play.models.daos.DataVersionDao;
-import org.iatoki.judgels.play.models.daos.impls.DataVersionHibernateDao;
+import org.iatoki.judgels.play.migration.DataVersionDao;
+import org.iatoki.judgels.play.migration.DataVersionHibernateDao;
 import org.iatoki.judgels.play.services.BaseDataMigrationService;
 import play.db.jpa.JPA;
 
@@ -13,6 +13,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 public abstract class AbstractBaseDataMigrationServiceImpl implements BaseDataMigrationService {
 
     private DataVersionDao dataVersionDao;

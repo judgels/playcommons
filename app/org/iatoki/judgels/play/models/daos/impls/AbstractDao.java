@@ -7,6 +7,10 @@ import play.db.jpa.JPA;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 public abstract class AbstractDao<K, M extends AbstractModel> implements Dao<K, M> {
 
     private final Class<M> modelClass;

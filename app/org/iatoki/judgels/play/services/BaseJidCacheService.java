@@ -5,6 +5,10 @@ import org.iatoki.judgels.play.models.entities.AbstractJidCacheModel;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 public interface BaseJidCacheService<M extends AbstractJidCacheModel> {
 
     void putDisplayName(String jid, String displayName, String user, String ipAddress);

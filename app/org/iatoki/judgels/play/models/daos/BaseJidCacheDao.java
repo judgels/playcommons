@@ -5,6 +5,10 @@ import org.iatoki.judgels.play.models.entities.AbstractJidCacheModel;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 public interface BaseJidCacheDao<M extends AbstractJidCacheModel> extends Dao<Long, M> {
 
     M createJidCacheModel();

@@ -7,6 +7,10 @@ import play.twirl.api.Html;
 
 import java.util.List;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 public final class HtmlTemplate {
 
     private LazyHtml content;

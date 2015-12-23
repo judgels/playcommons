@@ -5,6 +5,10 @@ import org.iatoki.judgels.play.models.JidChildPrefixes;
 import org.iatoki.judgels.play.models.JidPrefix;
 import org.iatoki.judgels.play.models.entities.AbstractJudgelsModel;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 public final class JidService {
 
     private static JidService INSTANCE;

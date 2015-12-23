@@ -2,6 +2,10 @@ package org.iatoki.judgels.play;
 
 import com.typesafe.config.Config;
 
+/**
+ * @deprecated Use individual config instead.
+ */
+@Deprecated
 public final class JudgelsPlayProperties {
 
     private static JudgelsPlayProperties INSTANCE;
@@ -127,12 +131,12 @@ public final class JudgelsPlayProperties {
     }
 
     private void build() {
-        this.appTitle = requireStringValue("application.title");
-        this.appCopyright = requireStringValue("application.copyright");
-        this.canonicalUrl = requireStringValue("link.canonicalUrl");
+        this.appTitle = requireStringValue("general.title");
+        this.appCopyright = requireStringValue("general.copyright");
+        this.canonicalUrl = requireStringValue("general.canonicalUrl");
         this.metaKeywords = requireStringValue("seo.metaKeywords");
         this.metaDescription = requireStringValue("seo.metaDescription");
-        this.githubLink = requireStringValue("link.github");
+        this.githubLink = requireStringValue("general.githubUrl");
         this.usingGoogleAnalytics = requireBooleanValue("google.analytics.use");
         this.googleAnalyticsId = getStringValue("google.analytics.id");
         this.googleAnalyticsViewId = getStringValue("google.analytics.viewId");

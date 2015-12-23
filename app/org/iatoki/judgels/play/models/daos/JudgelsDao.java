@@ -5,6 +5,10 @@ import org.iatoki.judgels.play.models.entities.AbstractModel;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 public interface JudgelsDao<M extends AbstractModel> extends Dao<Long, M> {
 
     void persist(M model, int childIndex, String user, String ipAddress);

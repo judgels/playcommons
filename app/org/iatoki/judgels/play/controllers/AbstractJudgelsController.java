@@ -22,6 +22,10 @@ import play.mvc.Result;
 import play.mvc.Results;
 import play.twirl.api.Html;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 @EntityNotFoundGuard
 @UnsupportedOperationGuard
 public abstract class AbstractJudgelsController extends Controller {

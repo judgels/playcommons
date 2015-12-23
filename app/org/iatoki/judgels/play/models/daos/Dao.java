@@ -7,6 +7,10 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 public interface Dao<K, M extends AbstractModel> {
 
     void persist(M model, String user, String ipAddress);

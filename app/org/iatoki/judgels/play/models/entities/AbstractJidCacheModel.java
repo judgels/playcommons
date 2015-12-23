@@ -4,6 +4,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 @MappedSuperclass
 public abstract class AbstractJidCacheModel extends AbstractModel {
 

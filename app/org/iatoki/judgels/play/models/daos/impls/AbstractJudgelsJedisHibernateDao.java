@@ -15,6 +15,10 @@ import javax.persistence.criteria.Root;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 public abstract class AbstractJudgelsJedisHibernateDao<M extends AbstractJudgelsModel> extends AbstractJudgelsHibernateDao<M> implements JudgelsDao<M> {
 
     private final JedisPool jedisPool;

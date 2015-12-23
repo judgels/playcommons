@@ -9,6 +9,10 @@ import org.iatoki.judgels.play.services.BaseJidCacheService;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 public abstract class AbstractBaseJidCacheServiceImpl<M extends AbstractJidCacheModel> implements BaseJidCacheService<M> {
 
     private final BaseJidCacheDao<M> jidCacheDao;

@@ -10,6 +10,10 @@ import javax.persistence.Id;
 import java.lang.reflect.Field;
 import java.util.List;
 
+/**
+ * @deprecated Has been restructured to different package.
+ */
+@Deprecated
 public abstract class AbstractJedisHibernateDao<K, M extends AbstractModel> extends AbstractHibernateDao<K, M> {
 
     private final JedisPool jedisPool;
