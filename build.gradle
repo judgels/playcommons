@@ -1,0 +1,65 @@
+plugins {
+    id 'play'
+    id 'idea'
+}
+
+model {
+    components {
+        play {
+            platform play: '2.4.6', scala: '2.11', java: '1.8'
+            injectedRoutesGenerator = true
+            sources.twirlTemplates.defaultImports = TwirlImports.JAVA
+        }
+    }
+}
+
+dependencies {
+    play project(':commons')
+    play "org.scala-lang:scala-compiler:2.11.4"
+    play "com.typesafe.play:play-java-jpa_2.11:2.4.6"
+    play "javax.inject:javax.inject:1"
+    play "org.hibernate:hibernate-entitymanager:4.3.7.Final"
+    play "mysql:mysql-connector-java:5.1.26"
+    play "com.typesafe.play.modules:play-modules-redis_2.11:2.4.1"
+    play "joda-time:joda-time:2.3"
+    play "org.seleniumhq.selenium:selenium-java:2.46.0"
+    play "org.jsoup:jsoup:1.8.3"
+    play "com.googlecode.htmlcompressor:htmlcompressor:1.4"
+    play "com.google.apis:google-api-services-analytics:v3-rev118-1.20.0"
+    play "org.apache.poi:poi:3.10-FINAL"
+    play "com.adrianhurt:play-bootstrap_2.11:1.0-P24-B3-SNAPSHOT"
+    play "org.webjars:Eonasdan-bootstrap-datetimepicker:4.7.14" 
+    play "org.webjars:bootstrap:3.3.4"
+    play "org.webjars:jquery-ui:1.11.4" 
+    play "org.webjars:jquery:2.1.4"
+    play "org.webjars:less:2.5.0"
+    play "org.webjars:requirejs:2.1.18"
+    play "org.webjars:momentjs:2.10.3"
+    play "org.webjars:ckeditor:4.5.3"
+    play "org.webjars:select2:4.0.0-2"
+}
+
+repositories {
+    jcenter()
+    maven {
+        name "typesafe-maven-release"
+        url "https://repo.typesafe.com/typesafe/maven-releases"
+    }
+    ivy {
+        name "typesafe-ivy-release"
+        url "https://repo.typesafe.com/typesafe/ivy-releases"
+        layout "ivy"
+    }
+    maven {
+        name "sonatype-oss"
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+    maven {
+        name "pk11-scratch"
+        url "http://pk11-scratch.googlecode.com/svn/trunk"
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.12'
+}

@@ -17,3 +17,7 @@ projectFilesBackup/
 conf/*.conf
 !conf/*_default.conf
 .DS_STORE
+build/*
+.gradle
+*.ipr
+*.iws
