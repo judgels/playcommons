@@ -1,5 +1,6 @@
 package org.iatoki.judgels.play.controllers.apis;
 
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.common.io.Files;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -18,6 +19,7 @@ import org.iatoki.judgels.play.api.JudgelsAppClientService;
 import org.iatoki.judgels.play.controllers.AbstractJudgelsController;
 import play.data.DynamicForm;
 import play.data.Form;
+import play.libs.Json;
 import play.mvc.Result;
 
 import javax.imageio.ImageIO;
@@ -158,6 +160,13 @@ public abstract class AbstractJudgelsAPIController extends AbstractJudgelsContro
                 throw new JudgelsAPIInternalServerErrorException(e2);
             }
         }
+    }
+
+    protected static Result badRequestAsJson(String err) {
+        ObjectNode result = Json.newObject();
+        result.put("err", err);
+
+        return badRequest(result);
     }
 
     protected static Result okAsDownload(String resourceUrl) {
