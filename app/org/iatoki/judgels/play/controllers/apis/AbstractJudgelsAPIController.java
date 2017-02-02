@@ -108,6 +108,13 @@ public abstract class AbstractJudgelsAPIController extends AbstractJudgelsContro
         }
     }
 
+    protected static Result okJson() {
+        ObjectNode result = Json.newObject();
+        result.put("status", "OK");
+
+        return ok(result);
+    }
+
     protected static Result okAsImage(String imageUrl) {
         try {
             new URL(imageUrl);
