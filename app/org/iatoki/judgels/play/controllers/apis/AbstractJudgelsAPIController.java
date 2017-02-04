@@ -176,6 +176,20 @@ public abstract class AbstractJudgelsAPIController extends AbstractJudgelsContro
         return badRequest(result);
     }
 
+    protected static Result notFoundAsJson(String message) {
+        ObjectNode result = Json.newObject();
+        result.put("err", message);
+
+        return badRequest(result);
+    }
+
+    protected static Result unauthorizeddAsJson(String message) {
+        ObjectNode result = Json.newObject();
+        result.put("err", message);
+
+        return unauthorized(result);
+    }
+
     protected static Result okAsDownload(String resourceUrl) {
         try {
             new URL(resourceUrl);
