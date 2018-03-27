@@ -12,6 +12,8 @@ import javax.persistence.criteria.Order;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.persistence.metamodel.SingularAttribute;
+import java.sql.Date;
+import java.time.Clock;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -19,28 +21,30 @@ import java.util.stream.Collectors;
 
 public abstract class AbstractHibernateDao<K, M extends AbstractModel> extends AbstractDao<K, M> {
 
+    private final Clock clock = Clock.systemUTC();
+
     protected AbstractHibernateDao(Class<M> modelClass) {
         super(modelClass);
     }
 
     @Override
     public void persist(M model, String user, String ipAddress) {
-        model.userCreate = user;
-        model.timeCreate = System.currentTimeMillis();
-        model.ipCreate = ipAddress;
+        model.createdBy = user;
+        model.createdAt = Date.from(clock.instant());
+        model.createdIp = ipAddress;
 
-        model.userUpdate = user;
-        model.timeUpdate = model.timeCreate;
-        model.ipUpdate = ipAddress;
+        model.updatedBy = user;
+        model.updatedAt = model.createdAt;
+        model.updatedIp = ipAddress;
 
         JPA.em().persist(model);
     }
 
     @Override
     public M edit(M model, String user, String ipAddress) {
-        model.userUpdate = user;
-        model.timeUpdate = System.currentTimeMillis();
-        model.ipUpdate = ipAddress;
+        model.updatedBy = user;
+        model.updatedAt = Date.from(clock.instant());
+        model.updatedIp = ipAddress;
 
         return JPA.em().merge(model);
     }

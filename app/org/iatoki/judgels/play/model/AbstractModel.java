@@ -1,19 +1,24 @@
 package org.iatoki.judgels.play.model;
 
 import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.util.Date;
 
 @MappedSuperclass
 public abstract class AbstractModel {
 
-    public String userCreate;
+    public String createdBy;
 
-    public long timeCreate;
+    @Temporal(TemporalType.TIMESTAMP)
+    public Date createdAt;
 
-    public String ipCreate;
+    public String createdIp;
 
-    public String userUpdate;
+    public String updatedBy;
 
-    public long timeUpdate;
+    @Temporal(TemporalType.TIMESTAMP)
+    public Date updatedAt;
 
-    public String ipUpdate;
+    public String updatedIp;
 }
